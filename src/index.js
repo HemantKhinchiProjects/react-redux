@@ -10,8 +10,8 @@ const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-    <Provider>
-      <App store={store} />
+    <Provider store={store}>
+      <App />
     </Provider>
   </StrictMode>
 );
