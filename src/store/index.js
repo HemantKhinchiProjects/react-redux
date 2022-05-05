@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
 const redux = require('redux');
-const intionalStage = { counter: 0 ,showCounter = true};
-const counterReducer = (state = intionalStage , action) => {
+const intionalStage = { counter: 0, showCounter = true};
+const counterReducer = (state = intionalStage, action) => {
   if (action.type === 'increment') {
     return {
       counter: state.counter + 1,
