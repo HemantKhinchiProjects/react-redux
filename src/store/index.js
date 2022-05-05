@@ -1,19 +1,29 @@
 import { createStore } from 'redux';
 const redux = require('redux');
-const counterReducer = (state = { counter: 0 }, action) => {
+const intionalStage = { counter: 0 ,showCounter = true};
+const counterReducer = (state = intionalStage , action) => {
   if (action.type === 'increment') {
     return {
       counter: state.counter + 1,
+      showCounter:state.showCounter
     };
   }
-  if (action.type === 'increaseby5') {
+  if (action.type === 'increase') {
     return {
-      counter: state.counter + 5,
+      counter: state.counter + action.demoNumber,
+      showCounter:state.showCounter
     };
   }
   if (action.type === 'decrement') {
     return {
       counter: state.counter - 1,
+      showCounter:state.showCounter
+    };
+  }
+  if(action.type === 'toggle'){
+    return {
+      showCounter:!state.showCounter,
+      counter:state.counter
     };
   }
   return state;
