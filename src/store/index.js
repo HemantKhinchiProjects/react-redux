@@ -1,9 +1,9 @@
 import { createSlice, configureStore } from '@reduxjs/toolkit';
 const redux = require('redux');
-const intionalStage = { counter: 0, showCounter: true };
+const intionalState = { counter: 0, showCounter: true };
 const counterSlice = createSlice({
   name: 'counter',
-  intionalStage,
+  intionalState,
   reducers: {
     increment(state) {
       state.counter++;
