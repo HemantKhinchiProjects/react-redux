@@ -19,12 +19,12 @@ const counterSlice = createSlice({
     },
   },
 });
-const initionalAuthState = {
+const initialAuthState = {
   isAuthenticated: false,
 };
 const authSlice = createSlice({
   name: 'authentication',
-  initialState: initionalAuthState,
+  initialState: initialAuthState,
   reducers: {
     login(state) {
       state.isAuthenticated = true;
