@@ -67,6 +67,7 @@ const store = configureStore({
   reducer: { counter: counterSlice.reducer, auth: authSlice.reducer },
 });
 export const counterActions = counterSlice.actions;
-export const authSlice = authSlice.actions;
+export const authActions = authSlice.actions;
+
 //subscribe
 export default store;
